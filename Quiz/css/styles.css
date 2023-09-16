@@ -1,0 +1,359 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(255, 241, 255, 0.8), rgba(255, 255, 255, 0.8)), url(3dk.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; 
+  color: #666666;
+  font-family: "Montserrat", sans-serif;
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+  line-height: 1px;
+}
+
+.text-primary {
+  color: #666666;
+}
+
+.text-blue {
+  color: #246dec;
+}
+
+.text-red {
+  color: #cc3c43;
+}
+
+.text-green {
+  color:#be00ae;
+  
+}
+
+.text-orange {
+  color: #f5b74f;
+}
+
+.font-weight-bold {
+  font-weight: 600;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar main main main";
+  height: 100vh;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+  grid-area: header;
+  height: 70px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+  display: none;
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background: linear-gradient(rgba(216, 0, 169, 0.8),rgba(38, 88, 251, 0.8));
+  color: white;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    the z-index of the ApexCharts is 11
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+
+/* ---------- MAIN ---------- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  border-radius: 25px;
+  box-shadow: 0 1rem 2rem #333;
+
+  
+  
+}
+
+.start-quiz {
+  padding: 12px 16px 12px 16px;
+  text-decoration: none;
+  background-color: #246dec;
+  width: 120px;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  margin-left: 35%;
+  margin-top: 4%;
+
+
+}
+.start-quiz:hover {
+  background-color: #be00ae;
+}
+
+.box {
+
+  padding: 15px;
+  
+}
+
+.box1 {
+  margin: 0 auto;
+}
+
+.sub-container {
+  display: flex;
+  justify-content: center;
+}
+
+.circular-progress{
+  position: relative;
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.progress-value{
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: #333;
+}
+.text{
+  font-size: 20px;
+  font-weight: 500;
+  color: #606060;
+  text-align: center;
+}
+
+.line2 {
+  font-size: 16px;
+  text-align: center;
+}
+
+.c1,.c3 {
+  width: 130px;
+  height: 130px;
+
+}
+
+.c1::before , .c3::before{
+  height: 115px;
+  width: 115px;
+}
+
+.title-msg {
+  font-size: 22px;
+  
+  
+}
+.header-list-item {
+  list-style-type: none;
+  
+}
+
+.header-right a{
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-right span {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+/* ---------- SCROLLBARS ---------- */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #a5aaad;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4f35a1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a5aaad;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+
+/* Medium <= 992px */
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+
+  .container {
+    left : 50%;
+  }
+}
+
+/* Small <= 768px */
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+  .container {
+    left : 50%;
+    width: 80%;
+    padding: 5%;
+  }
+
+  .circular-progress{
+
+    height: 150px;
+    width: 150px;
+  }
+
+  .circular-progress::before {
+    height: 130px;
+  width: 130px;
+  }
+
+  .box{
+    padding: 2%;
+  }
+}
+
+/* Extra Small <= 576px */
+@media screen and (max-width: 576px) {
+  .header-left {
+    display: none;
+  }
+  .circular-progress{
+
+    height: 115px;
+    width: 115px;
+  }
+
+  .circular-progress::before {
+    height: 100px;
+  width: 100px;
+  }
+
+}

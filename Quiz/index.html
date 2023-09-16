@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <li class="header-list-item">
+            <a href="https://muhammadp3.sg-host.com/dashboard/index.html" target="_self" class="logout-btn">
+              <span class="material-icons-outlined">
+                logout
+                </span>Log out
+            </a>
+          </li>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <img src="logo.png" alt="" width="200px">         
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/dashboard/index.html" target="_self">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Quiz/index.html" target="_self">
+              <span class="material-icons-outlined">quiz</span>Quiz
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Topics/index.html" target="_self">
+              <span class="material-icons-outlined">fact_check</span> Topics
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Reviews/index.html" target="_self">
+              <span class="material-icons-outlined">rate_review</span> Reviews
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/coming-soon/index.html" target="_self">
+              <span class="material-icons-outlined">cloud_done</span> Usage
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Resources/index.html" target="_self">
+              <span class="material-icons-outlined">poll</span> Resources
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Accounts/index.html" target="_self">
+              <span class="material-icons-outlined">settings</span> Account
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+     <!-- Main -->
+    <div class="covering-box">
+      
+      <div class="container">
+        <p class="title-msg">Good Work <b>James!</b>, You are nearly there.</p>
+        <div class="box box1">
+        <div class="circular-progress">
+            <span class="progress-value">0%</span>
+        </div>
+
+        <span class="text average">Average Score</span>
+        </div>
+        <div class="sub-container">
+        <div class="box box2">
+          <div class="circular-progress c1">
+              <span class="progress-value p1">0</span>
+          </div>
+  
+          <span class="text line2">Topic Complete</span>
+          </div>
+          <div class="box box3">
+            <div class="circular-progress c4 c1">
+                <span class="progress-value p4">0</span>
+            </div>
+    
+            <span class="text line2">Quiz Complete</span>
+            </div>
+            <div class="box box4">
+              <div class="circular-progress c3">
+                  <span class="progress-value p3">0</span>
+              </div>
+      
+              <span class="text line2">High Score</span>
+              </div>
+        </div>
+        <a href="https://muhammadp3.sg-host.com/test/quiz.html" class="start-quiz" id="startquiz">Start Quiz</a>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

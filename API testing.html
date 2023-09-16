@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Results</title>
+</head>
+<body>
+  <a href="#" class="title-link">Link 1</a>
+    <a href="#" class="title-link">Link 2</a>
+    <a href="#" class="title-link">Link 3</a>
+
+  <script>
+
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  return crypto.subtle.digest('SHA-256', data).then(buffer => {
+    const hashArray = Array.from(new Uint8Array(buffer));
+    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    return hashHex;
+  });
+}
+
+hashPassword("1234560")
+  .then(hash => {
+    var raw = JSON.stringify({
+      "email": "ahmed.bookiest@gmail.com",
+      "password": hash // Use the hashed password
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+
+    fetch("https://mcqapi.onrender.com/api/users/login", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+  })
+  .catch(error => console.error('Error hashing password: ', error));
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <li class="header-list-item">
+            <a href="https://muhammadp3.sg-host.com/dashboard/index.html" target="_self" class="logout-btn">
+              <span class="material-icons-outlined">
+                logout
+                </span>Log out
+            </a>
+          </li>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <img src="logo.png" alt="" width="200px">         
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/dashboard/index.html" target="_self">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Quiz/index.html" target="_self">
+              <span class="material-icons-outlined">quiz</span>Quiz
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Topics/index.html" target="_self">
+              <span class="material-icons-outlined">fact_check</span> Topics
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Reviews/index.html" target="_self">
+              <span class="material-icons-outlined">rate_review</span> Reviews
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Usage/index.html" target="_self">
+              <span class="material-icons-outlined">cloud_done</span> Usage
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Resources/index.html" target="_self">
+              <span class="material-icons-outlined">poll</span> Resources
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://muhammadp3.sg-host.com/Accounts/index.html" target="_self">
+              <span class="material-icons-outlined">settings</span> Account
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>USAGE</h2>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>WEEKLY GOALS</h3>
+              <span class="material-icons-outlined">leaderboard</span>
+            </div>
+            <h1>0/3</h1>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <h3>DAILY GOALS</h3>
+              <span class="material-icons-outlined">leaderboard</span>
+            </div>
+            <h1>0/21</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>CORRECT ANSWERS</h3>
+              <span class="material-icons-outlined">published_with_changes</span>
+            </div>
+            <h1>3/9</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>POINTS</h3>
+              <span class="material-icons-outlined">
+                thumb_up_alt
+                </span>
+            </div>
+            <h1>9</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>TIME SPENT</h3>
+              <span class="material-icons-outlined">
+                update
+                </span>
+            </div>
+            <h1>1 min</h1>
+          </div>
+          
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title">Time Summary</h2>
+            <div id="bar-chart"></div>
+          </div>
+
+          
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
